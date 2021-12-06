@@ -1,20 +1,19 @@
 {
-  "name": "bitswap-uikit",
-  "version": "0.0.9",
-  "description": "Set of UI components for Jetswap projects",
+  "name": "jetswap-uikit",
+  "version": "0.0.16",
+  "description": "Set of UI components for pancake projects",
   "main": "dist/index.cjs.js",
   "module": "dist/index.esm.js",
   "types": "dist/index.d.ts",
   "files": [
     "dist"
   ],
-  "repository": "https://github.com/js2docker/bitswap-uikit.git",
+  "repository": "https://github.com/gabbo-dam/jetswap-uikit",
   "license": "MIT",
   "scripts": {
     "build": "rm -rf ./dist && rollup -c && tsc -d --emitDeclarationOnly --declarationDir dist",
     "lint": "eslint 'src/**/*.{js,jsx,ts,tsx}'",
-    "format:check": "prettier --check --loglevel error 'src/**/*.{js,jsx,ts,tsx}'",
-    "format:write": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
+    "format": "prettier --write 'src/**/*.{js,jsx,ts,tsx}'",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
     "test": "jest",
@@ -22,7 +21,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn format:write",
+      "pre-commit": "yarn format",
       "commit-msg": "commitlint -E HUSKY_GIT_PARAMS"
     }
   },
@@ -38,7 +37,6 @@
     "@commitlint/config-conventional": "^11.0.0",
     "@pancakeswap-libs/eslint-config-pancake": "0.1.0",
     "@rollup/plugin-typescript": "^8.2.0",
-    "@rollup/plugin-url": "^6.0.0",
     "@storybook/addon-a11y": "^6.1.18",
     "@storybook/addon-actions": "^6.1.18",
     "@storybook/addon-essentials": "^6.1.18",
